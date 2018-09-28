@@ -4,8 +4,6 @@ build:
     commands:
       - npm install
       - framgia-ci run
-    when:
-      branch: develop
 cache:
   mount:
     - node_modules
