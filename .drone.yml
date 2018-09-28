@@ -5,8 +5,7 @@ build:
       - npm install
       - framgia-ci run
     when:
-      event: [pull_request]
-      branch: dev/develop*
+      branch: develop
 cache:
   mount:
     - node_modules
