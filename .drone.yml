@@ -2,8 +2,22 @@ build:
   check:
     image: framgia/laravel-workspace:latest
     commands:
+      - cp .env.example .env
+      - composer install
+      - php artisan key:generate
       - npm install
+      - npm run dev # or gulp
       - framgia-ci run
+compose:
+  database:
+    image: mysql
+    expose:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: laravel57
+      MYSQL_USER: user
+      MYSQL_PASSWORD: s3cret
+      MYSQL_ROOT_PASSWORD: root
 cache:
   mount:
     - node_modules
