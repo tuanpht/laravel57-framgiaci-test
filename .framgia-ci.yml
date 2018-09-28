@@ -29,7 +29,7 @@ test:
     ignore: true
     command: node node_modules/eslint/bin/eslint.js --format=checkstyle
       --output-file=.framgia-ci-reports/eslint.xml
-      resources/assets/js/
+      resources/js/
   phpcs:
     enable: true
     ignore: false
