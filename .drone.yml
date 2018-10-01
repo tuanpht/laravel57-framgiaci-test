@@ -8,6 +8,8 @@ build:
       - npm install
       - npm run dev # or gulp
       - framgia-ci run
+    when:
+      event: push
 compose:
   database:
     image: mysql
