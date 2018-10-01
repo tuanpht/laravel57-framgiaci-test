@@ -1,5 +1,7 @@
 # Framgia CI for Laravel project
 
+[![Build Status](http://ci.framgia.vn/api/badges/tuanpht/laravel57-framgiaci-test/status.svg)](http://ci.framgia.vn/tuanpht/laravel57-framgiaci-test)
+
 - [Framgia-CI Document](https://github.com/framgia/ci-service-document)
 - Steps
   + Add `.drone.yml`, `.framgia-ci.yml`, see [example](https://github.com/framgia/ci-service-document/tree/master/php), [document](https://github.com/framgia/ci-report-tool/)
