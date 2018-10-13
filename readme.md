@@ -9,3 +9,21 @@
   + If Github repository is private:
     * Go to ci.framgia.vn repo `SETTINGS` -> Copy value of `Public Key`
     * Go to Github repository Setting -> Add Delpoy Key
+  + If you want to use some secret value in `.drone.yml`:
+    * Go to ci.framgia.vn repo `SECRETS` -> Define key, value as `YAML` format
+      ```yml
+      CHATWORK_ROOM_ID: abc
+      CHATWORK_TOKEN: secret
+      ```
+    * Generate and copy encrypted key to file `.drone.sec`
+    * Start using in `.drone.yml`:
+      ```yml
+      notify:
+        chatwork:
+        image: fdplugins/chatwork
+        room_id: $$CHATWORK_ROOM_ID
+        token: $$CHATWORK_TOKEN
+        format: "TO ALL >>>..."
+        when:
+          event: push
+      ```
