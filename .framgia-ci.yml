@@ -33,9 +33,8 @@ test:
   phpcs:
     enable: true
     ignore: false
-    command: phpcs --runtime-set ignore_warnings_on_exit 1 --standard=Framgia
+    command: phpcs --runtime-set ignore_warnings_on_exit 1 --standard=phpcs.xml
       --report-checkstyle=.framgia-ci-reports/phpcs.xml
-      app
   phpunit:
     enable: true
     ignore: false

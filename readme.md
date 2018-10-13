@@ -27,3 +27,11 @@
         when:
           event: push
       ```
+- Tips:
+  + Custom `phpcs` standard
+    * Create file `phpcs.xml` in root project dir
+    * Edit `phpcs` command in `.framgia-ci.yml` if needed
+      ```diff
+      -    command: phpcs --runtime-set ignore_warnings_on_exit 1 --standard=Framgia
+      +    command: phpcs --runtime-set ignore_warnings_on_exit 1 --standard=phpcs.xml
+      ```
